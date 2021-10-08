@@ -1,19 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+# include <stdio.h>
+
 /**
- * main - Entry point
+ *main - beginning of program
  *
- * Return: Always 0 (Success)
+ *Description: prints the alphabet followed by a blank line
+ *
+ *Return: 0
  */
 int main(void)
 {
-	char low;
+	char abc;
 
-	for (low = 'a'; low <= 'z'; low++)
-		putchar(low);
-		printf("\n");
-
+	for (abc = 'a'; abc <= 'z'; abc++)
+	{
+		putchar(abc);
+	}
+	putchar('\n');
 	return (0);
-
 }
