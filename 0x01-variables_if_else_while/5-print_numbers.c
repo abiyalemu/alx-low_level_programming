@@ -1,20 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+# include <stdio.h>
+
 /**
- * main - Entry point
+ *main - beginning of program
  *
- * Return: Always 0 (Success)
+ *Description: prints all single digit numbers base 10
+ *
+ *Return: 0
  */
 int main(void)
 {
-	int i;
+	int n;
 
-	for (i = 0; i < 10; i++)
-	  {
-		printf("%d", i);
-	  }
-		printf("\n");
-
+	for (n = 0; n < 10; n++)
+	{
+		printf("%d", n);
+	}
+	printf("\n");
 	return (0);
 }
