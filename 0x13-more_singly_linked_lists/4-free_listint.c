@@ -1,17 +1,21 @@
 #include "lists.h"
+
 /**
- * free_listint - Entry Point
- * @head: head
- * Return: 0
+ * free_listint - frees a list
+ * @head: list of type listint_t
  */
+
 void free_listint(listint_t *head)
 {
+	listint_t *current;
+
 	if (head == NULL)
 		return;
 
-	while (head)
+	while (head != NULL)
 	{
+		current = head->next;
 		free(head);
-		head = head->next;
+		head = current;
 	}
 }
