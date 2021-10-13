@@ -1,19 +1,21 @@
 #include "lists.h"
+
 /**
- * free_listint2 - Entry Point
- * @head: head
- * Return: 0
+ * free_listint2 - frees a list and sets head to NULL
+ * @head: list of type listint_t
  */
+
 void free_listint2(listint_t **head)
 {
-	if (*head == NULL)
+	listint_t *current;
+
+	if (head == NULL)
 		return;
 
-	while (*head)
+	while (*head != NULL)
 	{
+		current = (*head)->next;
 		free(*head);
-		*head = (*head)->next;
+		*head = current;
 	}
-
-	*head = NULL;
 }
