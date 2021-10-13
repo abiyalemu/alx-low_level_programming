@@ -1,22 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "holberton.h"
+#include <stdlib.h>
+
 /**
- * free_grid - use free function on previous grid
- * @grid: 2 dim. array to free
- * @height: input height (size)
- * Return: free'd grid
+ * free_grid - frees previously created 2-d array
+ * @grid: array created with alloc_grid
+ * @height: height of the grid
  */
+
 void free_grid(int **grid, int height)
 {
-	int i;
+	int index;
 
-	if (grid != NULL || height != 0)
-	{
-		for (i = 0; i < height; i++)
-		{
-			free(grid[i]);
-		}
-		free(grid);
-	}
+	if (grid == NULL || height == 0)
+		return;
+
+	for (index = 0; index < height; index++)
+		free(grid[index]);
+
+	free(grid);
 }
