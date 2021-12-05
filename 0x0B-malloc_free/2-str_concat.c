@@ -2,44 +2,46 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- * str_concat - get ends of input and add together for size
- * @s1: input one to concat
- * @s2: input two to concat
- * Return: concat of s1 and s2
+ * *str_concat - function with two arguments
+ * @s1: char type pointer
+ * @s2: char type pointer
+ *
+ * Description: concatenates two strings
+ * Return: Null for failure or concatenated string
  */
 char *str_concat(char *s1, char *s2)
 {
-	int end1, end2, i = 0;
-	char *array;
+	char *ptr;
+	int i, i2, j, k;
 
-	if (s1 == NULL || s2 == NULL)
-		s1 = s2 = "";
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	i = 0;
+	while (s1[i] != '\0')
+		i++;
+	i2 = 0;
+	while (s2[i2] != '\0')
+		i2++;
 
-	for (end1 = 0; end1 <= *s1; end1++)
-	{
-	}
-
-	for (end2 = 0; end2 <= *s2; end2++)
-	{
-	}
-
-	array = malloc(sizeof(char) * (end1 + end2 + 1));
-
-	if (array == NULL)
+	ptr = malloc(sizeof(char) * i + i2 + 1);
+	if (ptr == NULL)
 		return (NULL);
-
-	while (*s1)
+	j = 0;
+	while (s1[j] != '\0')
 	{
-		array[i] = *s1;
-		i++;
-		s1++;
+		ptr[j] = s1[j];
+		j++;
 	}
 
-	while (*s2)
+	k = 0;
+	while (s2[k] != '\0')
 	{
-		array[i] = *s2;
-		i++;
-		s2++;
+		ptr[j] = s2[k];
+		j++;
+		k++;
 	}
-	return (array);
+	ptr[j] = '\0';
+	return (ptr);
 }
