@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
  *print all the element ofa dlistint_t list by print_dlistint
