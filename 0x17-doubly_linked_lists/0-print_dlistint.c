@@ -4,7 +4,8 @@
 /**
  *print all the element ofa dlistint_t list by print_dlistint
  *@h: pointer to the start of the linked list
- *return: number of nodes
+ *
+ *return: the number of nodes
  */
 size_t print_dlistint(const dlistint_t *h)
 {
